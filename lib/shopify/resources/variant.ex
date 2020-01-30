@@ -27,6 +27,7 @@ defmodule Shopify.Variant do
     :grams,
     :weight,
     :weight_unit,
+    :image_id,
     :id,
     :inventory_item_id,
     :inventory_management,
