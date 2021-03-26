@@ -26,7 +26,8 @@ defmodule Shopify.Location do
     :country_code,
     :country_name,
     :province_code,
-    :legacy
+    :legacy,
+    :active
   ]
 
   @doc false
