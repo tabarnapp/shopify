@@ -58,6 +58,17 @@ defmodule Shopify.Session do
     }
   end
 
+  @spec session_with_keys(binary, binary, binary) :: Shopify.Session.t()
+  def session_with_keys(shop_name, client_id, client_secret) do
+    %Session{
+      type: :oauth,
+      shop_name: Shopify.scrub_shop_name(shop_name),
+      client_id: client_id,
+      client_secret: client_secret,
+      api_version: Config.get(:api_version)
+    }
+  end
+
   @spec new() :: Shopify.Session.t()
   def new do
     Config.shop_name()

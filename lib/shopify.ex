@@ -41,6 +41,10 @@ defmodule Shopify do
     Shopify.Session.new(shop_name, api_key, password)
   end
 
+  def session_new(shop_name, api_key, api_secret) do
+    Shopify.Session.session_with_keys(shop_name, api_key, api_secret)
+  end
+
   @doc """
   Create a new Shopify session for an OAuth app using the provided config.
 
