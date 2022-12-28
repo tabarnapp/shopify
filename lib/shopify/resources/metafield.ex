@@ -50,7 +50,7 @@ defmodule Shopify.Metafield do
     %Metafield{
       key: "",
       value: "",
-      type: "string",
+      type: "multi_line_text_field",
       namespace: ""
     }
   end
